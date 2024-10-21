@@ -1,0 +1,42 @@
+@use "../../../variables";
+
+.metric-card {
+    width: 155px;
+    height: 108px;
+
+    background: linear-gradient(82.38deg, rgba(24, 86, 94, 0.8) 0%, rgba(53, 122, 147, 0.8) 100%);
+
+    border: 1px solid #A4B5B9;
+    border-radius: 10px;
+    padding: 8px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+
+    .upper{
+        display: flex;
+        justify-content: space-between;
+        // align-items: center;
+
+        img{
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+        }
+
+        .stat{
+            font-size: 42px;
+            font-weight: 700;
+        }
+
+    }
+    
+    .lower{
+        font-size: 16px;
+        font-weight: 700;
+        color: #EBEAF2;
+        line-height: 23px;
+    }
+}

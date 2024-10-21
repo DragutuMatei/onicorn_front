@@ -1,0 +1,117 @@
+@use "../../../variables";
+
+.panel {
+    background-color: variables.$bg;
+    color: variables.$text;
+    font-family: 'Manrope', sans-serif;
+
+    margin: 0px 24px 0px 24px;
+
+    max-width: 212px;
+    height: 98vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: fixed;
+
+    img.logo {
+        max-width: 212px;
+    }
+
+    .menu {
+        line-height: 23px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        padding: 16px;
+        background: #FFFFFFCC;
+
+        border-radius: 8px;
+
+        label {
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .option {
+            cursor: pointer;
+            border-radius: 10px;
+          
+            display: flex;
+            align-items: center;
+            // justify-content: space-evenly;
+            padding-left: 20px;
+            gap: 8px;
+
+            height: 39px;
+
+            input[type=checkbox] {
+                height: 0;
+                width: 0;
+                visibility: hidden;
+              }
+              
+              label {
+                cursor: pointer;
+                text-indent: -9999px;
+                width: 55px;
+                height: 30px;
+                background: var(--lightBtn);
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                -webkit-border-radius: 100px;
+                -moz-border-radius: 100px;
+                border-radius: 100px;
+                position: relative;
+              }
+              
+              label:after {
+                content: '';
+                background: #fff;
+                width: 20px;
+                height: 20px;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                border-radius: 50%;
+                position: absolute;
+                top: 5px;
+                left: 4px;
+               transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 320ms;
+              }
+              
+              input:checked + label {
+                background: #FFBD07;
+              }
+              
+              input:checked + label:after {
+                left: calc(100% - 5px);
+                -webkit-transform: translateX(-100%);
+                -moz-transform: translateX(-100%);
+                -ms-transform: translateX(-100%);
+                -o-transform: translateX(-100%);
+                transform: translateX(-100%);
+              }
+
+            img {
+                width: 20px;
+                object-fit: contain;
+            }
+
+            &.highlight {
+                font-weight: 600;
+                color: #FFF;
+                background: rgb(1, 9, 31);
+                background: linear-gradient(90deg, rgba(1, 9, 31, 1) 0%, rgba(31, 54, 103, 1) 100%);
+            }
+        }
+
+
+    }
+
+}

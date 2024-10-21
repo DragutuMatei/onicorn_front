@@ -1,0 +1,271 @@
+@use '../../variables';
+
+.home {
+    background: variables.$bg;
+    font-family: 'Manrope', sans-serif;
+
+    width: 100vw;
+    height: 100vh;
+
+    .search {
+        z-index: 100;
+        position: fixed;
+        right: 24px;
+
+        margin-top: 8px;
+        margin-bottom: 8px;
+        // top: 8px;
+        // bottom: 8px;
+
+        width: calc(100vw - 325px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+
+        .bar {
+            flex-grow: 1;
+
+            display: flex;
+            align-items: center;
+            justify-self: center;
+            gap: 10px;
+
+            border-radius: 8px;
+            background: #FFF;
+
+            padding-left: 23px;
+
+            img {
+                object-fit: contain;
+                width: 24px;
+            }
+
+            input {
+                width: 100%;
+                font-family: 'Manrope', sans-serif;
+
+                font-size: 18px;
+
+                border: none;
+                outline: none;
+                height: 56px;
+
+                &::placeholder {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+
+                &:active, &::selection{
+                    outline: none;
+                    border: none;
+                }
+
+            }
+        }
+
+        .button {
+            cursor: pointer;
+            min-width: 56px;
+            width: 56px;
+            height: 56px;
+
+            border-radius: 8px;
+            background: #FFF;
+            border: 1px;
+
+            overflow: hidden;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                object-fit: contain;
+                width: inherit;
+
+                &.small {
+                    width: 24px;
+                }
+            }
+        }
+    }
+
+    .feed-wrap {
+        position: absolute;
+        right: 24px;
+        top: 74px;
+        width: calc(100vw - 325px);
+
+        display: flex;
+        justify-content: space-between;
+        gap: 32px;
+
+        margin-top: 16px;
+
+
+        .feed {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            .card {
+                background: #fff;
+
+                width: calc(100% - 32px);
+                border-radius: 8px;
+            }
+
+            .hello {
+                background: none;
+
+                font-weight: 700;
+                font-size: 32px;
+                line-height: 25.2px;
+                color: variables.$main-color;
+            }
+
+            .setup {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                height: 65px;
+
+                padding: 16px;
+
+                .talk {
+                    min-width: 240px;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 8px;
+
+                    .title {
+                        font-size: 20px;
+                        font-weight: 700;
+                        line-height: 34px;
+                    }
+
+                    .desc {
+                        font-size: 16px;
+                        line-height: 23px;
+                        color: #808080;
+                    }
+
+                }
+
+                .button {
+                    height: 40px;
+                    width: 212px;
+
+                    text-wrap: nowrap;
+
+                    cursor: pointer;
+
+                    border-radius: 8px;
+                    width: 212px;
+                    height: 40px;
+                    border: 1px solid black;
+
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+
+                    img{
+                        width: 16px;
+                        object-fit: cover;
+                        height: 23px;
+                    }
+
+                    button {
+                        cursor: pointer;
+                        background: transparent;
+                        outline: none;
+                        border: none;
+                        font-size: 16px;
+                        line-height: 23px;
+                        font-weight: 700;
+                    }
+                }
+
+            }
+
+            .metrics{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                // justify-content: space-evenly;
+                padding: 16px;
+
+                .title{
+                    font-size: 20px;
+                    line-height: 34px;
+                    font-weight: 700;
+                }
+
+                .list{
+                    display: flex;
+                    gap: 27px;
+                    justify-content: space-evenly;
+                }
+            }
+
+            .listing{
+                display: flex;
+                flex-direction: column;
+                padding: 16px;
+                // justify-content: space-between;
+                gap: 14px;
+
+                .title{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                
+                    .main{
+                        font-size: 20px;
+                        line-height: 34px;
+                        font-weight: 700;
+                    }
+
+                    .see{
+                        font-size: 16px;
+                        line-height: 23px;
+                        font-weight: 700;
+                        text-decoration: underline;
+                    }
+                }
+
+                .list{
+                    display: flex;
+                    gap: 24px;
+                    justify-content: space-between;
+                }
+            }
+
+            .drafts{
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                padding: 18px;
+
+                
+                .title{
+                    font-size: 20px;
+                    line-height: 34px;
+                    font-weight: 700;
+                }
+                
+                .list{
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+
+    }
+
+}

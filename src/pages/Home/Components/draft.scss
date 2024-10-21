@@ -1,0 +1,39 @@
+.contain{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding: 16px;
+
+    width: 100%;
+
+    border: 1px solid #EEE;
+    border-radius: 8px;
+
+    width: 225px;
+
+    .preview{
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+    }
+
+    .details{
+        display: flex;
+        flex-direction: column;
+
+        .subtitle{
+            font-size: 12px;
+            line-height: 16px;
+
+            color: #808080;
+        }
+
+        .title{
+            font-size: 16px;
+            height: 23px;
+            font-weight: 700;
+
+            color: #201F54;
+        }
+    }
+}
